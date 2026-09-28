@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Order | Zee Fashion Palace</title>
+  <meta name="description" content="Request a made-to-measure outfit from Zee Fashion Palace. Send your style, occasion and measurements straight to WhatsApp.">
+  <meta name="theme-color" content="#1a1114">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1800&q=70')">
+      <div class="container">
+        <span class="eyebrow">Bespoke Service</span>
+        <h1>Custom Order</h1>
+        <div class="divider"></div>
+        <p>Tell us about the outfit you want. Your request goes straight to our WhatsApp, and we'll reply with ideas and a quote.</p>
+      </div>
+    </section>
+
+    <section class="section section-cream">
+      <div class="container order-layout">
+        <div class="form-card reveal">
+          <form id="custom-order-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name <span class="req">*</span></label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone / WhatsApp <span class="req">*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+              <div class="field">
+                <label for="outfit">Outfit type <span class="req">*</span></label>
+                <select id="outfit" name="outfit" required>
+                  <option value="">Select…</option>
+                  <option>Bridal gown</option>
+                  <option>Evening / Dinner gown</option>
+                  <option>Traditional attire</option>
+                  <option>Asoebi / Aso-ebi</option>
+                  <option>Casual dress / Two-piece</option>
+                  <option>Men's suit / Native</option>
+                  <option>Children's outfit</option>
+                  <option>Alteration / Repair</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="occasion">Occasion</label>
+                <input id="occasion" name="occasion" placeholder="Wedding, birthday, owambe…">
+              </div>
+              <div class="field">
+                <label for="date">Date needed</label>
+                <input id="date" name="date" type="date">
+              </div>
+              <div class="field">
+                <label for="budget">Budget (optional)</label>
+                <input id="budget" name="budget" placeholder="e.g. 80,000">
+              </div>
+            </div>
+
+            <fieldset>
+              <div class="fieldset-head">
+                <div>
+                  <h3>Measurements</h3>
+                  <p class="small muted" style="margin:0">Optional. Leave blank and we'll measure you in person.</p>
+                </div>
+                <div class="unit-toggle" role="radiogroup" aria-label="Unit">
+                  <label><input type="radio" name="unit" value="inches" checked> Inches</label>
+                  <label><input type="radio" name="unit" value="cm"> cm</label>
+                </div>
+              </div>
+              <div class="measure-grid">
+                <div class="field"><label for="m-bust">Bust / Chest</label><input id="m-bust" data-measure="Bust/Chest" inputmode="decimal"></div>
+                <div class="field"><label for="m-waist">Waist</label><input id="m-waist" data-measure="Waist" inputmode="decimal"></div>
+                <div class="field"><label for="m-hips">Hips</label><input id="m-hips" data-measure="Hips" inputmode="decimal"></div>
+                <div class="field"><label for="m-shoulder">Shoulder</label><input id="m-shoulder" data-measure="Shoulder" inputmode="decimal"></div>
+                <div class="field"><label for="m-sleeve">Sleeve length</label><input id="m-sleeve" data-measure="Sleeve length" inputmode="decimal"></div>
+                <div class="field"><label for="m-length">Full length</label><input id="m-length" data-measure="Full length" inputmode="decimal"></div>
+                <div class="field"><label for="m-height">Height</label><input id="m-height" data-measure="Height" inputmode="decimal"></div>
+                <div class="field"><label for="m-under">Under-bust</label><input id="m-under" data-measure="Under-bust" inputmode="decimal"></div>
+              </div>
+            </fieldset>
+
+            <div class="form-grid" style="margin-top:24px">
+              <div class="field full">
+                <label for="fabric">Fabric &amp; colour preference</label>
+                <input id="fabric" name="fabric" placeholder="Lace, satin, Ankara, I'll bring my own…">
+              </div>
+              <div class="field full">
+                <label for="notes">Describe your design</label>
+                <textarea id="notes" name="notes" placeholder="Neckline, sleeves, length, style inspiration… You can send pictures once the chat opens."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top:28px">
+              <button type="submit" class="btn btn-whatsapp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04.65C5.76.65.65 5.76.65 12.04c0 2 .52 3.97 1.52 5.7L.55 23.65l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39c6.28 0 11.39-5.11 11.39-11.39S18.32.65 12.04.65z"/></svg>
+                Send Request via WhatsApp
+              </button>
+            </div>
+          </form>
+          <p class="form-success" hidden>WhatsApp is opening with your request. Just press <strong>Send</strong>. Don't forget to attach any inspiration photos!</p>
+        </div>
+
+        <aside class="form-aside">
+          <div class="aside-card reveal reveal-delay-1">
+            <span class="eyebrow">What happens next</span>
+            <h3 style="margin-top:10px">Your journey</h3>
+            <ol>
+              <li>WhatsApp opens with your details filled in. Just hit send.</li>
+              <li>We reply with design ideas, fabric options, and a quote.</li>
+              <li>A deposit confirms your order and books your slot.</li>
+              <li>A fitting session, then final touches and delivery.</li>
+            </ol>
+          </div>
+          <div class="aside-card reveal reveal-delay-2" style="background:var(--burgundy)">
+            <span class="eyebrow">Measuring tip</span>
+            <p style="margin-top:10px">Measure over light clothing, keep the tape snug but not tight, and ask a friend to help. When in doubt, leave it blank and we'll guide you.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
